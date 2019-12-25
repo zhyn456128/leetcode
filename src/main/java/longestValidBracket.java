@@ -29,6 +29,9 @@ public class longestValidBracket {
         }
         Collections.sort(list);
         int listSize = list.size();
+        if(listSize == 0){
+            return length;
+        }
         for(int i=0;i<listSize-1;i++){
             max = list.get(i+1)-list.get(i)-1>max?list.get(i+1)-list.get(i)-1:max;
         }
